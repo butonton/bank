@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>monobank</title>
+    <link rel="icon" href="img/unnamed.png" type="image/png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+    <div class="wrap">
+            
+        <div class="logIn">
+            <div class="inputContainer">
+                <p>введіть ваше ім'я та прізвище</p>
+                <input type="text" id="name" placeholder="ім'я">
+                <input type="text" id="secondName" placeholder="прізвище">
+                <h3 id="errorName">не коректне ім'я чи прізвище</h3>
+                <button id="agreeAcaunt">створити акаунт</button>
+            </div>
+            
+        </div>
+
+        <div class="home ">
+            <div class="bg"></div>
+            <div class="bg2"></div>
+
+            <div class="closeZonePanel"></div>
+                <div class="backPanel hidePanel">
+
+                    
+
+                    <div class="user">
+
+                        <div class="acauntBtn">
+                            <div id="firstNameFirstLetter1"></div>
+                            <div id="secondNameFirstLetter1"></div>
+                        </div>
+
+                        <div id="firstNameUser"></div> 
+                        <div id="secondNameUser"></div>
+
+                    </div>
+
+                    <div class="logOutOfTheAccountBtn" id="logOutOfTheAccountBtn">
+                        
+                        <h3>вийти з акаунту</h3>
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </div>
+
+                </div>
+            
+
+            <header>
+
+                <div class="leftBox box">
+
+                    <div class="acauntBtn">
+                        <div id="firstNameFirstLetter"></div>
+                        <div id="secondNameFirstLetter"></div>
+                    </div>
+
+                    <div class="newsBtn"><i class="fa-solid fa-comment"></i></div>
+
+                </div>
+
+                <div class="rightBox box">
+
+                    <div class="cashbackBtn selectNone"><i class="fa-solid fa-gift"></i><span id="cashbackMount">00.00</span>$</div>
+                    <span class="stick selectNone">|</span>
+                    <div class="statisticsBtn"><i class="fa-solid fa-square-poll-vertical"></i></div>
+
+                </div>
+
+            </header>
+
+            <div class="balance" ><span id="balanceVisual">!!!</span>$</div>
+        
+            <div class="cardBox">
+                <div class="cardObj">
+                    <div class="monobankLogo">monobank</div>
+
+                    <div class="numberBox">
+
+                        <div class="number">
+
+                            <span id="4num1col">1110</span>
+                            <span>****</span>
+                            <span>****</span>
+                            <span id="4num4col">1487</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="visaLogo">VISA</div>
+                </div>
+                
+            </div>
+
+            <div class="quickAction">
+                <!-- <div class="btnBox">
+                    <button id="transferToTheCard"><i class="fa-regular fa-window-maximize"></i></button>
+                    <p>переказати на карту</p>
+                </div> -->
+                <div class="btnBox btnBox2">
+                    <button id="mobileTopUp"><i class="fa-solid fa-mobile-screen-button"></i></button>
+                    <p>поповнити телефон</p>
+                </div>
+                <div class="btnBox">
+                    <button id="creatorTopUp"><i class="fa-solid fa-money-bills"></i></button>
+                    <p>заплатити за creator</p>
+                </div>
+            </div>
+
+            <div class="operationsBox">
+                <h3>Операції</h3>
+
+
+                <div class="operations">
+                    
+                    <div class="plug">
+                        <h2>тут поки що нічого нема</h2>
+                        <p>тут будуть з'являтися ваша історія транзакцій</p>
+                    </div>
+                    
+                </div>
+
+
+            </div>
+
+            <div class="border">
+                <div class="limitBtn">
+                    <div class="bank"><i class="fa-solid fa-building-columns"></i></div>
+                    <p>Ліміти та обмеження</p>
+                </div>
+            </div>
+
+
+        <!-- home end -->
+        </div>
+
+        <div class="pagePayMobileTopUp pagePay">
+            <div class="container">
+                <h1>введіть суму на яку хочете поповнити телефон</h1>
+                <input type="number" id="amountMobileTopUp">
+                <button id="agreePayMobileTopUp" class="agreePay">підтвердити</button>
+            </div>
+        </div>
+
+        <div class="pagePayCreatorTopUp pagePay">
+            <div class="container">
+                <h1>введіть суму за яку хочете заплатити creator</h1>
+                <input type="number" id="amountCreatorTopUp">
+                <button id="agreePayCreatorTopUp" class="agreePay">підтвердити</button>
+            </div>
+        </div>
+
+
+     </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
